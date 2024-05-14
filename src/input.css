@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Vazirmatn-Regular";
+    src: url(../public/fonts/Vazirmatn-Regular.woff2);
+  }
+  @font-face {
+    font-family: "Vazirmatn-Medium";
+    src: url(../public/fonts/Vazirmatn-Medium.woff2);
+  }
+  @font-face {
+    font-family: "Vazirmatn-Bold";
+    src: url(../public/fonts/Vazirmatn-Bold.woff2);
+  }
+  @font-face {
+    font-family: "Vazirmatn-Black";
+    src: url(../public/fonts/Vazirmatn-Black.woff2);
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply w-full min-h-screen flex flex-col justify-center items-center text-slate-700;
+  }
+  .top-component {
+    @apply w-full text-center sm:text-right py-4;
+  }
+  .top-component__title {
+    @apply font-VazirBlack text-2xl;
+  }
+  .bottom-component {
+    @apply flex flex-col gap-y-10 sm:gap-x-10 lg:flex-row justify-center items-center sm:items-start w-full;
+  }
+
+  .orders {
+    @apply w-full lg:w-[70%];
+  }
+  .orders-list {
+    @apply w-full flex flex-col gap-y-4;
+  }
+  .card {
+    @apply w-full max-h-[152px] flex justify-between gap-4 bg-white rounded-xl p-2 sm:p-4;
+  }
+  .card__img-wrapper {
+    @apply w-1/4 sm:h-[120px] rounded-xl overflow-hidden bg-slate-400;
+  }
+  .card__img {
+    @apply object-cover w-full h-full;
+  }
+  .card__title {
+    @apply text-xs sm:text-base font-VazirBlack tracking-tighter;
+  }
+  .card-list {
+    @apply hidden sm:flex w-[250px] h-16 flex-col gap-y-2 flex-wrap text-slate-500;
+  }
+  .card-list__item {
+    @apply flex items-center gap-1;
+  }
+  .card-list__item-text {
+    @apply font-VazirBold text-sm;
+  }
+  .card-price__wrapper {
+    @apply flex w-full justify-between sm:w-auto items-center gap-2;
+  }
+  .card-price__text {
+    @apply font-VazirBlack text-sm sm:text-xl text-blue-500;
+  }
+  .trash-btn {
+    @apply flex justify-center items-center p-1 sm:p-2 rounded-xl border border-slate-200;
+  }
+  .recipt-wrapper {
+    @apply w-full lg:w-[30%];
+  }
+  .recipt {
+    @apply w-full h-full flex flex-col rounded-xl bg-white;
+  }
+  .recipt__header {
+    @apply border-b border-gray-200;
+  }
+  .recipt__body {
+    @apply border-b border-gray-200 border-dashed;
+  }
+  .recipt__body-item {
+    @apply flex justify-between p-5;
+  }
+  .recipt__price {
+    @apply font-VazirBlack text-sm sm:text-xl;
+  }
+  .recipt__discount {
+    @apply text-center font-VazirBold mb-4 text-sm sm:text-sm;
+  }
+  .recipt__btn {
+    @apply w-full flex justify-center gap-1 items-center text-white text-center py-4 rounded-2xl bg-blue-500;
+  }
+  .recipt__btn-text {
+    @apply font-VazirBlack text-sm sm:text-base;
+  }
+}
